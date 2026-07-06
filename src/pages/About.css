@@ -1,0 +1,183 @@
+.about-page {
+  padding-bottom: 100px;
+}
+
+.about-hero-header {
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.about-hero-header h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+/* STORY SECTON SPLIT GRID */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.story-text-side h2 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.story-text-side h2 span {
+  color: #a855f7;
+}
+
+.lead-p {
+  font-size: 1.2rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.story-text-side p {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.mini-badges-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.mini-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #d8b4fe;
+}
+
+/* RASM TOMONI VA NEON CHEGARA EFFECTI */
+.story-image-side .image-border-glow {
+  position: relative;
+  border-radius: 24px;
+  padding: 6px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  box-shadow: 0 15px 40px rgba(147, 51, 234, 0.3);
+}
+
+.story-image-side img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+/* VALUES SECTION */
+.about-values-section {
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+}
+
+.sub-section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+.sub-section-title span {
+  color: #a855f7;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-num {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(147, 51, 234, 0.04);
+  user-select: none;
+}
+
+.value-card h3 {
+  font-size: 1.35rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* HAMKORLAR */
+.about-partners {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-partners h3 {
+  color: #64748b;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+}
+
+.partners-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.partner-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #475569;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.partner-logo:hover {
+  color: #a855f7;
+}
+
+/* RESPONSIVE DESIGN (TELEFONLAR UCHUN) */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .grand-stats { flex-direction: column; gap: 30px; margin-top: 20px; }
+  .stat-card-divider { display: none; }
+  .about-story-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-hero-header h1 { font-size: 2.2rem; }
+}

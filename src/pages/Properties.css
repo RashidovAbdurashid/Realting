@@ -1,0 +1,670 @@
+.page-container {
+  padding: 150px 5% 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.property-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(147, 51, 234, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(147, 51, 234, 0.2);
+}
+
+.card-img-container {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.property-card:hover img {
+  transform: scale(1.08);
+}
+
+.status-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  color: #c084fc;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.prop-price {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.prop-title {
+  font-size: 1.4rem;
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.prop-location {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.prop-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.prop-details {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.prop-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.purple-icon {
+  color: #a855f7;
+}
+
+.prop-features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.feature-item cubic-bezier {
+  color: #a855f7;
+}
+
+/* Karta bosiluvchanligi effekti */
+.property-card {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(147, 51, 234, 0.3);
+  box-shadow: 0 12px 25px rgba(147, 51, 234, 0.12);
+}
+
+/* Obyektlar uchun maxsus modal oyna */
+.prop-modal-content {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  animation: propModalIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes propModalIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.modal-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-price-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #a855f7;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+}
+
+.prop-modal-body {
+  padding: 30px;
+}
+
+.prop-modal-body h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.modal-location-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.modal-specs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.spec-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.spec-box strong {
+  color: #a855f7;
+}
+
+.prop-full-desc {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.modal-amenities h4 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+/* Sotib olish tugmasi */
+.buy-now-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(147, 51, 234, 0.45);
+}
+
+/* --- MODAL ASOSIY FON (OVERLAY) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 4, 14, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* --- MODAL OYNASI KONTEYNERI (KICHRAYTIRILDI) --- */
+.luxury-modal-content {
+  background: rgba(18, 14, 36, 0.9);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.2);
+  width: 100%;
+  max-width: 480px; /* 600px dan 480px ga tushirildi - ancha ixcham */
+  border-radius: 20px; /* Burchaklar sal yumshatildi */
+  overflow: hidden;
+  position: relative;
+  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- YOPISH TUGMASI --- */
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+/* --- MODAL RASMI (BALANDLIGI KICHRAYTIRILDI) --- */
+.modal-hero-image {
+  position: relative;
+  height: 200px; /* 260px dan 200px ga tushirildi */
+  width: 100%;
+}
+
+.modal-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-price-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+}
+
+/* --- MATNLAR QISMI (PADDING LABALANDLIGI KAMAYTIRILDI) --- */
+.modal-details-body {
+  padding: 22px; /* 30px dan 22px ga tushirildi */
+}
+
+.modal-details-body h2 {
+  color: white;
+  font-size: 1.5rem; /* Shrift o'lchami moslashtirildi */
+  margin-bottom: 4px;
+}
+
+.modal-location-text {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Parametrlar qatori */
+.modal-specs-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.spec-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+.modal-description-text {
+  color: #94a3b8;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Qulayliklar */
+.modal-amenities-section h3 {
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.amenities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 25px;
+}
+
+.amenity-item-tag {
+  background: rgba(147, 51, 234, 0.06);
+  border: 1px solid rgba(147, 51, 234, 0.15);
+  color: #d8b4fe;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+/* --- SOTIB OLISH TUGMASI --- */
+.modal-submit-buy-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-submit-buy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
+}
+
+/* --- FILTR PANELI STILLARI --- */
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: -10px auto 40px;
+  padding: 20px 30px;
+  background: rgba(18, 14, 36, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 16px;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group.search-box {
+  flex: 2; /* Qidiruv inputi kengroq joy egallaydi */
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  color: #c084fc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-panel input, 
+.filter-panel select {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-panel input:focus, 
+.filter-panel select:focus {
+  border-color: #a855f7;
+  background: rgba(147, 51, 234, 0.05);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
+}
+
+/* Select ichidagi variantlar fon rangi to'g'irlash (brauzerlar uchun) */
+.filter-panel select option {
+  background: #0f0c1b;
+  color: white;
+}
+
+/* --- NATIJA TOPILMAGANDAGI BLOK --- */
+.no-results {
+  text-align: center;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px dashed rgba(147, 51, 234, 0.3);
+  border-radius: 16px;
+}
+
+.no-results h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Kichik ekranlar uchun moslashtirish */
+@media (max-width: 768px) {
+  .filter-panel {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .filter-group {
+    width: 100%;
+  }
+}
+
+/* --- TUG'RILANGAN MODAL OVERLAY VA IXCHAM CONTENT (Oldingi variant saqlandi) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 4, 14, 0.8);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.luxury-modal-content {
+  background: rgba(18, 14, 36, 0.92);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.2);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.modal-hero-image {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.modal-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-price-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+}
+
+.modal-details-body {
+  padding: 22px;
+}
+
+.modal-details-body h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.modal-location-text {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.modal-specs-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.spec-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+.modal-description-text {
+  color: #94a3b8;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.modal-amenities-section h3 {
+  color: white;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.amenities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 25px;
+}
+
+.amenity-item-tag {
+  background: rgba(147, 51, 234, 0.06);
+  border: 1px solid rgba(147, 51, 234, 0.15);
+  color: #d8b4fe;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.modal-submit-buy-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-submit-buy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
+}

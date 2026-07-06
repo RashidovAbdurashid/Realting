@@ -1,0 +1,30 @@
+.footer {
+  background: #000;
+  border-top: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 60px 5% 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer-logo span {
+  color: #a855f7;
+}
+
+.footer p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #475569 !important;
+  border-top: 1px solid #1e293b;
+  padding-top: 30px;
+}

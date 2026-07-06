@@ -1,0 +1,258 @@
+.home-page-container {
+  background: #06040e;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* GRAND HERO */
+.grand-hero {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  background: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80') no-repeat center center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(6, 4, 14, 0.4), #06040e);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero-badge {
+  background: rgba(147, 51, 234, 0.15);
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c084fc;
+}
+
+.hero-content h1 {
+  font-size: 4rem; /* Ancha kattalashtirildi */
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 25px 0;
+  letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.hero-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-glow-btn {
+  padding: 16px 35px;
+  background: linear-gradient(135deg, #9333ea, #4f46e5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+}
+
+.main-glow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(147, 51, 234, 0.6);
+}
+
+.secondary-outline-btn {
+  padding: 16px 35px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-outline-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+}
+
+/* STATISTIKA BLOKI */
+.grand-stats {
+  max-width: 1100px;
+  margin: -60px auto 100px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  background: rgba(18, 14, 36, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 24px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #c084fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.stat-card-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* WHY US SECTION */
+.home-why-us {
+  padding: 100px 20px;
+}
+
+.big-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.big-title span {
+  color: #a855f7;
+}
+
+.big-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+.luxury-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-glow-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.feature-glow-box:hover {
+  border-color: rgba(147, 51, 234, 0.3);
+  background: rgba(147, 51, 234, 0.03);
+  transform: translateY(-5px);
+}
+
+.feat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-glow-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.feature-glow-box p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* CTA BANNER */
+.luxury-cta-banner {
+  position: relative;
+  max-width: 1200px;
+  margin: 80px auto 120px;
+  background: linear-gradient(135deg, rgba(29, 15, 66, 0.6), rgba(13, 10, 31, 0.9));
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  padding: 80px 40px;
+  border-radius: 30px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.luxury-cta-banner h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.luxury-cta-banner p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 35px;
+}
+
+.cta-action-btn {
+  padding: 16px 40px;
+  background: white;
+  color: #06040e;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-action-btn:hover {
+  background: #a855f7;
+  color: white;
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.5);
+}

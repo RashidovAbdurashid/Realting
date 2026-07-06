@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background-color: #050505; /* Purple Black / Deep Dark */
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Glassmorphism uchun umumiy klass */
+.glass-panel {
+  background: rgba(20, 20, 25, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(147, 51, 234, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-title span {
+  color: #a855f7;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
+}
