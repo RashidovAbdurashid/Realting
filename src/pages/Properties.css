@@ -668,3 +668,14 @@
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
 }
+
+.icon-margin {
+  margin-right: 6px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.icon-margin-small {
+  margin-right: 4px;
+  vertical-align: middle;
+}

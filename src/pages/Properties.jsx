@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import {
+  FaMapMarkerAlt,
+  FaBed,
+  FaBath,
+  FaRulerCombined,
+  FaSearch,
+  FaCheckCircle,
+  FaPaperPlane,
+} from "react-icons/fa"; // Kerakli ikonkalarni import qilamiz
 import "react-toastify/dist/ReactToastify.css";
 import "./Properties.css";
 
@@ -211,15 +220,12 @@ export default function Properties() {
 
   // --- FILTRLASH LOGIKASI ---
   const filteredProperties = properties.filter(function (item) {
-    // 1. Qidiruv matni bo'yicha filtr (Nomi yoki Manzili)
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.location.toLowerCase().includes(searchQuery.toLowerCase());
 
-    // 2. Kategoriya turi bo'yicha filtr
     const matchesType = selectedType === "All" || item.type === selectedType;
 
-    // 3. Narxlar diapazoni bo'yicha filtr
     let matchesPrice = true;
     if (selectedPriceRange === "under1M")
       matchesPrice = item.priceNum < 1000000;
@@ -233,10 +239,11 @@ export default function Properties() {
 
   function handlePurchase(title) {
     setSelectedProperty(null);
-    toast.success(`🚀 ${title} uchun sotuv bo'limiga yo'naltirilmoqdasiz...`, {
+    toast.success(`Sotuv bo'limiga yo'naltirilmoqdasiz...`, {
       position: "bottom-right",
       autoClose: 2000,
       theme: "dark",
+      icon: <FaPaperPlane color="#00df9a" />, // Toast ichidagi emoji ikonka bilan almashtirildi
     });
     setTimeout(function () {
       navigate("/contact");
@@ -256,12 +263,28 @@ export default function Properties() {
       <div className="filter-panel glass-panel">
         <div className="filter-group search-box">
           <label>Qidiruv</label>
-          <input
-            type="text"
-            placeholder="Nomi yoki joylashuvini yozing..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
+          <div
+            className="search-input-wrapper"
+            style={{ position: "relative" }}
+          >
+            <input
+              type="text"
+              placeholder="Nomi yoki joylashuvini yozing..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ paddingLeft: "30px" }}
+            />
+            <FaSearch
+              className="search-icon"
+              style={{
+                position: "absolute",
+                left: "10px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "#888",
+              }}
+            />
+          </div>
         </div>
 
         <div className="filter-group">
@@ -293,7 +316,7 @@ export default function Properties() {
         </div>
       </div>
 
-      {/* --- OBYEKTLAR RO'YXATI GERDI --- */}
+      {/* --- OBYEKTLAR RO'YXATI GRIDI --- */}
       {filteredProperties.length > 0 ? (
         <div className="properties-grid">
           {filteredProperties.map(function (item) {
@@ -310,15 +333,20 @@ export default function Properties() {
                 <div className="card-body">
                   <h3 className="prop-price">{item.price}</h3>
                   <h4 className="prop-title">{item.title}</h4>
-                  <p className="prop-location">📍 {item.location}</p>
+                  <p className="prop-location">
+                    <FaMapMarkerAlt className="icon-margin" /> {item.location}
+                  </p>
                   <div className="prop-features-grid">
                     <div className="feature-item">
+                      <FaBed className="icon-margin" />{" "}
                       <span>{item.beds} xona</span>
                     </div>
                     <div className="feature-item">
+                      <FaBath className="icon-margin" />{" "}
                       <span>{item.baths} hammom</span>
                     </div>
                     <div className="feature-item">
+                      <FaRulerCombined className="icon-margin" />{" "}
                       <span>{item.area}</span>
                     </div>
                   </div>
@@ -328,8 +356,12 @@ export default function Properties() {
           })}
         </div>
       ) : (
-        <div className="no-results glass-panel">
-          <h3>Obyekt topilmadi 🔍</h3>
+        <div
+          className="no-results glass-panel"
+          style={{ textAlign: "center", padding: "40px" }}
+        >
+          <FaSearch size={40} style={{ color: "#888", marginBottom: "15px" }} />
+          <h3>Obyekt topilmadi</h3>
           <p>
             Kiritilgan parametrlarga mos keladigan e'lonlar mavjud emas.
             Filtrlarni o'zgartirib ko'ring.
@@ -362,15 +394,22 @@ export default function Properties() {
             <div className="modal-details-body">
               <h2>{selectedProperty.title}</h2>
               <p className="modal-location-text">
-                📍 {selectedProperty.location}
+                <FaMapMarkerAlt className="icon-margin" />{" "}
+                {selectedProperty.location}
               </p>
 
               <div className="modal-specs-row">
-                <div className="spec-tag">💎 {selectedProperty.beds} xona</div>
                 <div className="spec-tag">
-                  🛁 {selectedProperty.baths} hammom
+                  <FaBed className="icon-margin" /> {selectedProperty.beds} xona
                 </div>
-                <div className="spec-tag">📐 {selectedProperty.area}</div>
+                <div className="spec-tag">
+                  <FaBath className="icon-margin" /> {selectedProperty.baths}{" "}
+                  hammom
+                </div>
+                <div className="spec-tag">
+                  <FaRulerCombined className="icon-margin" />{" "}
+                  {selectedProperty.area}
+                </div>
               </div>
 
               <p className="modal-description-text">
@@ -382,7 +421,11 @@ export default function Properties() {
                 <div className="amenities-container">
                   {selectedProperty.features.map((feature, idx) => (
                     <span key={idx} className="amenity-item-tag">
-                      ✓ {feature}
+                      <FaCheckCircle
+                        className="icon-margin-small"
+                        style={{ color: "#00df9a" }}
+                      />{" "}
+                      {feature}
                     </span>
                   ))}
                 </div>

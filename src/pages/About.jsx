@@ -1,4 +1,10 @@
 import React from "react";
+// Emojilar o'rniga Remix Icons to'plamidan kerakli ikonkalarni chaqiramiz
+import {
+  RiAwardLine,
+  RiFlashlightLine,
+  RiShieldCheckLine,
+} from "react-icons/ri";
 import "./About.css";
 
 export default function About() {
@@ -34,10 +40,20 @@ export default function About() {
             topilganlarigina katalogimizga qo'shiladi.
           </p>
 
+          {/* Emojilar o'rniga zamonaviy Ikonkalar qo'yildi */}
           <div className="mini-badges-row">
-            <div className="mini-badge">🎖️ Milliy Brend</div>
-            <div className="mini-badge">⚡ Tezkor Rasmiylashtirish</div>
-            <div className="mini-badge">🔒 100% Legal Kafolat</div>
+            <div className="mini-badge">
+              <RiAwardLine size={20} color="#a855f7" />
+              <span>Milliy Brend</span>
+            </div>
+            <div className="mini-badge">
+              <RiFlashlightLine size={20} color="#a855f7" />
+              <span>Tezkor Rasmiylashtirish</span>
+            </div>
+            <div className="mini-badge">
+              <RiShieldCheckLine size={20} color="#a855f7" />
+              <span>100% Legal Kafolat</span>
+            </div>
           </div>
         </div>
         <div className="story-image-side">

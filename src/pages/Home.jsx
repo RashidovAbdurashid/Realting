@@ -1,5 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+// Ikonkalarni import qilamiz (Remix Icons to'plamidan)
+import {
+  RiShieldKeyholeLine,
+  RiHomeWifiLine,
+  RiBankLine,
+} from "react-icons/ri";
 import "./Home.css";
 
 export default function Home() {
@@ -72,8 +78,11 @@ export default function Home() {
           </p>
 
           <div className="luxury-features-grid">
+            {/* 1-xususiyat */}
             <div className="feature-glow-box">
-              <div className="feat-icon">💎</div>
+              <div className="feat-icon">
+                <RiShieldKeyholeLine size={42} color="#a855f7" />
+              </div>
               <h3>Mutloq Maxfiylik</h3>
               <p>
                 24/7 qattiq qo'riqlash tizimi, yopiq hududlar va shaxsiy
@@ -81,8 +90,11 @@ export default function Home() {
               </p>
             </div>
 
+            {/* 2-xususiyat */}
             <div className="feature-glow-box">
-              <div className="feat-icon">🌐</div>
+              <div className="feat-icon">
+                <RiHomeWifiLine size={42} color="#a855f7" />
+              </div>
               <h3>Smart Home 5.0</h3>
               <p>
                 Uyingizdagi barcha jihozlar va iqlim nazoratini dunyoning
@@ -90,8 +102,11 @@ export default function Home() {
               </p>
             </div>
 
+            {/* 3-xususiyat */}
             <div className="feature-glow-box">
-              <div className="feat-icon">🏛️</div>
+              <div className="feat-icon">
+                <RiBankLine size={42} color="#a855f7" />
+              </div>
               <h3>Eksklyuziv Arxitektura</h3>
               <p>
                 Italiyalik va Buyuk Britaniyalik mashhur dizaynerlar tomonidan
@@ -101,7 +116,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="luxury-cta-banner">
         <div className="cta-blur-circle"></div>
