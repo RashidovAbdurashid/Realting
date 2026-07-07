@@ -1,42 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false); // Burger menyu holati
 
-  // Consultation sahifasiga yo'naltiruvchi funksiya
+  // Menyuni ochish/yopish funksiyasi
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Linklar bosilganda menyuni yopish
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   function handleConsultationClick() {
+    closeMenu();
     navigate("/consultation");
   }
 
   return (
-    <nav className="navbar glass-panel">
+    <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
+        <Link to="/" className="nav-logo" onClick={closeMenu}>
           Prime<span>Estate</span>
         </Link>
 
-        <ul className="nav-links">
+        {/* Burger lkonkasi */}
+        <div
+          className={`burger-menu ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+        </div>
+
+        {/* Navigatsiya linklari */}
+        <ul className={`nav-links ${isOpen ? "nav-active" : ""}`}>
           <li>
-            <NavLink to="/">Asosiy</NavLink>
+            <NavLink to="/" onClick={closeMenu}>
+              Asosiy
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">Biz haqimizda</NavLink>
+            <NavLink to="/about" onClick={closeMenu}>
+              Biz haqimizda
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/properties">Obyektlar</NavLink>
+            <NavLink to="/properties" onClick={closeMenu}>
+              Obyektlar
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/services">Xizmatlar</NavLink>
+            <NavLink to="/services" onClick={closeMenu}>
+              Xizmatlar
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Aloqa</NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>
+              Aloqa
+            </NavLink>
+          </li>
+          {/* Mobil versiya uchun tugma (menyu ichida joylashadi) */}
+          <li className="mobile-btn-container">
+            <button
+              className="nav-btn mobile-btn"
+              onClick={handleConsultationClick}
+            >
+              Consultation
+            </button>
           </li>
         </ul>
 
-        {/* Tugmaga onClick hodisasini ulaymiz */}
-        <button className="nav-btn" onClick={handleConsultationClick}>
+        {/* Desktop versiya uchun tugma */}
+        <button
+          className="nav-btn desktop-btn"
+          onClick={handleConsultationClick}
+        >
           Consultation
         </button>
       </div>

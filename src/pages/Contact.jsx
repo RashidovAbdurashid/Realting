@@ -1,10 +1,26 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify"; // React-toastify import qilindi
+import "react-toastify/dist/ReactToastify.css"; // Toast stillari import qilindi
 import "./Contact.css";
 
 export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
-    alert("Xabaringiz muvaffaqiyatli yuborildi!");
+
+    // Alert o'rniga chiroyli toast xabarnomasi
+    toast.success("Xabaringiz muvaffaqiyatli yuborildi! ✨", {
+      position: "top-right",
+      autoClose: 4000, // 4 soniyadan keyin o'zi yopiladi
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark", // Saytning premium/qorong'i dizayniga moslash uchun
+    });
+
+    // Xabar yuborilgach, input ichidagi yozuvlarni tozalab tashlash (UX uchun yaxshi amaliyot)
+    e.target.reset();
   }
 
   return (
@@ -148,7 +164,7 @@ export default function Contact() {
             <label>Xabaringiz matni</label>
             <textarea
               rows="4"
-              placeholder="Ushbu yerga yoyishingizni yozing..."
+              placeholder="Ushbu yerga yozishingizni yozing..."
               required
             ></textarea>
           </div>
@@ -158,6 +174,9 @@ export default function Contact() {
           </button>
         </form>
       </div>
+
+      {/* Toast xabarnomalari chiqishi uchun konteyner (Shart!) */}
+      <ToastContainer />
     </div>
   );
 }
