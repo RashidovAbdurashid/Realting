@@ -119,7 +119,6 @@
   color: #a855f7;
 }
 
-/* Karta bosiluvchanligi effekti */
 .property-card {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,7 +130,6 @@
   box-shadow: 0 12px 25px rgba(147, 51, 234, 0.12);
 }
 
-/* Obyektlar uchun maxsus modal oyna */
 .prop-modal-content {
   width: 100%;
   max-width: 650px;
@@ -238,7 +236,6 @@
   font-size: 0.9rem;
 }
 
-/* Sotib olish tugmasi */
 .buy-now-btn {
   width: 100%;
   padding: 15px;
@@ -257,7 +254,6 @@
   box-shadow: 0 8px 25px rgba(147, 51, 234, 0.45);
 }
 
-/* --- MODAL ASOSIY FON (OVERLAY) --- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -273,263 +269,8 @@
   padding: 20px;
 }
 
-/* --- MODAL OYNASI KONTEYNERI (KICHRAYTIRILDI) --- */
 .luxury-modal-content {
   background: rgba(18, 14, 36, 0.9);
-  border: 1px solid rgba(147, 51, 234, 0.3);
-  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.2);
-  width: 100%;
-  max-width: 480px; /* 600px dan 480px ga tushirildi - ancha ixcham */
-  border-radius: 20px; /* Burchaklar sal yumshatildi */
-  overflow: hidden;
-  position: relative;
-  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes modalSlideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* --- YOPISH TUGMASI --- */
-.modal-close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 5;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: 0.2s;
-}
-
-.modal-close-btn:hover {
-  background: #ef4444;
-  border-color: #ef4444;
-}
-
-/* --- MODAL RASMI (BALANDLIGI KICHRAYTIRILDI) --- */
-.modal-hero-image {
-  position: relative;
-  height: 200px; /* 260px dan 200px ga tushirildi */
-  width: 100%;
-}
-
-.modal-hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modal-price-badge {
-  position: absolute;
-  bottom: 12px;
-  right: 15px;
-  background: linear-gradient(135deg, #9333ea, #4f46e5);
-  color: white;
-  padding: 6px 16px;
-  border-radius: 10px;
-  font-size: 1.15rem;
-  font-weight: 800;
-  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
-}
-
-/* --- MATNLAR QISMI (PADDING LABALANDLIGI KAMAYTIRILDI) --- */
-.modal-details-body {
-  padding: 22px; /* 30px dan 22px ga tushirildi */
-}
-
-.modal-details-body h2 {
-  color: white;
-  font-size: 1.5rem; /* Shrift o'lchami moslashtirildi */
-  margin-bottom: 4px;
-}
-
-.modal-location-text {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-}
-
-/* Parametrlar qatori */
-.modal-specs-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.spec-tag {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 6px 12px;
-  border-radius: 8px;
-  color: #cbd5e1;
-  font-size: 0.8rem;
-}
-
-.modal-description-text {
-  color: #94a3b8;
-  line-height: 1.5;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
-/* Qulayliklar */
-.modal-amenities-section h3 {
-  color: white;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-.amenities-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 25px;
-}
-
-.amenity-item-tag {
-  background: rgba(147, 51, 234, 0.06);
-  border: 1px solid rgba(147, 51, 234, 0.15);
-  color: #d8b4fe;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-}
-
-/* --- SOTIB OLISH TUGMASI --- */
-.modal-submit-buy-btn {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #9333ea, #4f46e5);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.modal-submit-buy-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
-}
-
-/* --- FILTR PANELI STILLARI --- */
-.filter-panel {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1200px;
-  margin: -10px auto 40px;
-  padding: 20px 30px;
-  background: rgba(18, 14, 36, 0.6);
-  border: 1px solid rgba(147, 51, 234, 0.2);
-  border-radius: 16px;
-  align-items: center;
-}
-
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-  min-width: 200px;
-}
-
-.filter-group.search-box {
-  flex: 2; /* Qidiruv inputi kengroq joy egallaydi */
-}
-
-.filter-group label {
-  font-size: 0.85rem;
-  color: #c084fc;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.filter-panel input, 
-.filter-panel select {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: white;
-  font-size: 0.95rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.filter-panel input:focus, 
-.filter-panel select:focus {
-  border-color: #a855f7;
-  background: rgba(147, 51, 234, 0.05);
-  box-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
-}
-
-/* Select ichidagi variantlar fon rangi to'g'irlash (brauzerlar uchun) */
-.filter-panel select option {
-  background: #0f0c1b;
-  color: white;
-}
-
-/* --- NATIJA TOPILMAGANDAGI BLOK --- */
-.no-results {
-  text-align: center;
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 40px;
-  border: 1px dashed rgba(147, 51, 234, 0.3);
-  border-radius: 16px;
-}
-
-.no-results h3 {
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.no-results p {
-  color: #94a3b8;
-  font-size: 0.95rem;
-}
-
-/* Kichik ekranlar uchun moslashtirish */
-@media (max-width: 768px) {
-  .filter-panel {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .filter-group {
-    width: 100%;
-  }
-}
-
-/* --- TUG'RILANGAN MODAL OVERLAY VA IXCHAM CONTENT (Oldingi variant saqlandi) --- */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(6, 4, 14, 0.8);
-  backdrop-filter: blur(12px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 20px;
-}
-
-.luxury-modal-content {
-  background: rgba(18, 14, 36, 0.92);
   border: 1px solid rgba(147, 51, 234, 0.3);
   box-shadow: 0 25px 50px rgba(147, 51, 234, 0.2);
   width: 100%;
@@ -669,6 +410,95 @@
   box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
 }
 
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: -10px auto 40px;
+  padding: 20px 30px;
+  background: rgba(18, 14, 36, 0.6);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+  border-radius: 16px;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group.search-box {
+  flex: 2;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  color: #c084fc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-panel input, 
+.filter-panel select {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 16px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-panel input:focus, 
+.filter-panel select:focus {
+  border-color: #a855f7;
+  background: rgba(147, 51, 234, 0.05);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
+}
+
+.filter-panel select option {
+  background: #0f0c1b;
+  color: white;
+}
+
+.no-results {
+  text-align: center;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px dashed rgba(147, 51, 234, 0.3);
+  border-radius: 16px;
+}
+
+.no-results h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.no-results p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.luxury-modal-content {
+  background: rgba(18, 14, 36, 0.92);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 25px 50px rgba(147, 51, 234, 0.2);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .icon-margin {
   margin-right: 6px;
   vertical-align: middle;
@@ -678,4 +508,84 @@
 .icon-margin-small {
   margin-right: 4px;
   vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 120px 4% 80px;
+  }
+  .properties-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 100px 20px 60px;
+  }
+  .filter-panel {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+  .filter-group {
+    width: 100%;
+  }
+  .properties-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .card-img-container {
+    height: 240px;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .prop-price {
+    font-size: 1.8rem;
+  }
+  .prop-features-grid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .modal-overlay {
+    padding: 10px;
+  }
+  .luxury-modal-content, .prop-modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal-hero-image, .modal-img-wrapper {
+    height: 180px;
+  }
+  .modal-details-body, .prop-modal-body {
+    padding: 15px;
+  }
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .prop-price {
+    font-size: 1.6rem;
+  }
+  .prop-title {
+    font-size: 1.2rem;
+  }
+  .modal-specs-row, .modal-specs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .spec-tag, .spec-box {
+    width: 100%;
+    text-align: center;
+  }
+  .modal-price-badge, .modal-price-tag {
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 10px 15px 0;
+  }
 }

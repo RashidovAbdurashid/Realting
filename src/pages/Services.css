@@ -69,7 +69,6 @@
   color: #c084fc;
 }
 
-/* Modal oynasi (Popup) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -194,4 +193,66 @@
 .order-btn:hover {
   box-shadow: 0 5px 20px rgba(147, 51, 234, 0.4);
   transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-content {
+    padding: 30px 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .order-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page {
+    padding-bottom: 40px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 15px;
+  }
 }
