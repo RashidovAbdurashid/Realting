@@ -26,6 +26,8 @@
 }
 
 .card-img-container {
+  margin: auto;
+  align-items: center;
   width: 300px;
   height: 280px;
   position: relative;
@@ -33,6 +35,7 @@
 
 .card-img-container img {
   align-items: center;
+  margin: auto;
   width: 100%;
   height: 100%;
   border-radius: 20px;
