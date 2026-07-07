@@ -1,5 +1,5 @@
 .page-container {
-  padding: 150px 5% 100px;
+  padding: 10px 5% 100px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -20,18 +20,22 @@
 .property-card:hover {
   transform: translateY(-10px);
   border-color: rgba(147, 51, 234, 0.5);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(147, 51, 234, 0.2);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(147, 51, 234, 0.2);
 }
 
 .card-img-container {
+  width: 300px;
   height: 280px;
   position: relative;
-  overflow: hidden;
 }
 
 .card-img-container img {
+  align-items: center;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
   object-fit: cover;
   transition: transform 0.6s ease;
 }
@@ -103,14 +107,11 @@
 
 .prop-features-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 10px;
 }
 
 .feature-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin: auto;
   color: #cbd5e1;
   font-size: 0.95rem;
 }
@@ -140,8 +141,14 @@
 }
 
 @keyframes propModalIn {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-img-wrapper {
@@ -282,8 +289,14 @@
 }
 
 @keyframes modalSlideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-close-btn {
@@ -443,7 +456,7 @@
   letter-spacing: 1px;
 }
 
-.filter-panel input, 
+.filter-panel input,
 .filter-panel select {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -455,7 +468,7 @@
   transition: all 0.3s ease;
 }
 
-.filter-panel input:focus, 
+.filter-panel input:focus,
 .filter-panel select:focus {
   border-color: #a855f7;
   background: rgba(147, 51, 234, 0.05);
@@ -552,14 +565,17 @@
   .modal-overlay {
     padding: 10px;
   }
-  .luxury-modal-content, .prop-modal-content {
+  .luxury-modal-content,
+  .prop-modal-content {
     max-height: 90vh;
     overflow-y: auto;
   }
-  .modal-hero-image, .modal-img-wrapper {
+  .modal-hero-image,
+  .modal-img-wrapper {
     height: 180px;
   }
-  .modal-details-body, .prop-modal-body {
+  .modal-details-body,
+  .prop-modal-body {
     padding: 15px;
   }
   .amenities-grid {
@@ -574,15 +590,18 @@
   .prop-title {
     font-size: 1.2rem;
   }
-  .modal-specs-row, .modal-specs {
+  .modal-specs-row,
+  .modal-specs {
     flex-direction: column;
     gap: 8px;
   }
-  .spec-tag, .spec-box {
+  .spec-tag,
+  .spec-box {
     width: 100%;
     text-align: center;
   }
-  .modal-price-badge, .modal-price-tag {
+  .modal-price-badge,
+  .modal-price-tag {
     position: static;
     display: block;
     text-align: center;

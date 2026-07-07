@@ -218,8 +218,7 @@ export default function Properties() {
     },
   ];
 
-  // --- FILTRLASH LOGIKASI ---
-  const filteredProperties = properties.filter(function (item) {
+   const filteredProperties = properties.filter(function (item) {
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.location.toLowerCase().includes(searchQuery.toLowerCase());
@@ -259,7 +258,7 @@ export default function Properties() {
         Mukammal uyni topish uchun aqlli filtrlardan foydalaning.
       </p>
 
-      {/* --- INTELLEKTUAL FILTRLAR PANELI --- */}
+
       <div className="filter-panel glass-panel">
         <div className="filter-group search-box">
           <label>Qidiruv</label>
